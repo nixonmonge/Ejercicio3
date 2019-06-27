@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebFormEjemplo1.base2;
 using WebFormEjemplo1.dal;
+using WebFormEjemplo1.Dto;
 using WebFormEjemplo1.servicio;
 
 namespace WebFormEjemplo1.dal
@@ -70,6 +71,20 @@ namespace WebFormEjemplo1.dal
             }
             return resultado;
         }
+
+        public static List<ComprasDto> Listar3()
+        {
+            var resultado = new List<ComprasDto>();
+            string sql = @" consulta sql";
+            using (var grupo = new Model1())
+            {
+                // resultado = grupo.Compras.ToList();
+                resultado = grupo.Compras.Include("Usuario").ToList();
+            }
+            return resultado;
+
+        }
+
 
         public static List<Compras> ListarTodo()
         {
