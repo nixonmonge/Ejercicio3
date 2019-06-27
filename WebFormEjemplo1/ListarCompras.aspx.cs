@@ -10,13 +10,12 @@ using WebFormEjemplo1.servicio;
 
 namespace WebFormEjemplo1
 {
-    public partial class WebListado : System.Web.UI.Page
+    public partial class ListarCompras : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataSource=UsuarioDAL.ListarTodo();
+            GridView1.DataSource = ComprasDAL.ListarTodo();
             GridView1.DataBind();
-
         }
     }
 }

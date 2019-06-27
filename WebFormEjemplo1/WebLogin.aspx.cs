@@ -37,7 +37,7 @@ namespace WebFormEjemplo1
                 // guardar la sesion
                 Session["usuario"]= usuarioBase; // genero una cookie
 
-                Response.Redirect("WebListado.aspx");
+                Response.Redirect("default.aspx");
             }
 
 

@@ -4,6 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Listado de usuarios</h1>
     
-    <asp:GridView ID="GridView1" runat="server" CssClass="table table-striped">
+    <asp:GridView ID="GridView1" runat="server" CssClass="table table-striped" ShowHeaderWhenEmpty="True">
 </asp:GridView>
 </asp:Content>
